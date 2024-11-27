@@ -8,11 +8,15 @@ public class UIHandler : MonoBehaviour
 {
    private VisualElement m_Healthbar;
    public static UIHandler instance { get; private set; }
+ 
+  
+    
 
 
    private void Awake()
    {
        instance = this;
+      
    }
 
 
@@ -25,7 +29,6 @@ public class UIHandler : MonoBehaviour
        m_Healthbar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
        SetHealthValue(1.0f);
    }
-
 
 
 

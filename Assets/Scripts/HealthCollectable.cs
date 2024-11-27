@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HealthCollectable : MonoBehaviour
 {
+	public ParticleSystem SprinkleBurst;
 
    void OnTriggerEnter2D(Collider2D other)
    {
@@ -13,6 +14,8 @@ public class HealthCollectable : MonoBehaviour
 	   {
 		   controller.ChangeHealth(1);
 		   Destroy(gameObject);
+		   Instantiate(SprinkleBurst.gameObject);
+		   
 	   }
    }
 }
